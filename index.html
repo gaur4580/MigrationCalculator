@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>FAWS Migration Pricing Estimate Form</title>
+</head>
+<body>
+  <h3>FAWS Migration Estimation Cost Form</h3>
+  <p>
+    <b>Instructions:</b> Simply enter the number of servers to get a rough idea of potential pricing in USD. Minimum engagement of $ 2,500.
+  </p>
+  <form name="MIGRATIONS" action="javascript:myFunction(); return false;">
+    <table>
+      <tr>
+        <td>Number of Servers</td>
+        <td>
+          <input type="number" name="SERVERS" id="input" min="0" value="0" oninput="calculate();"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Estimated Cost Range (low)</td>
+        <td>
+          <div id="COST_LOW"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Estimated Cost Range (high)</td>
+        <td>
+          <div id="COST_HIGH"></div>
+        </td>
+      </tr>
+      <tr>
+  </table>
+  </form>
+
+  <object type="text/html" width="100%" height="1000px" data="caveats.html"></object>
+
+  <script type="text/javascript" src="js/calc.js"></script>
+</body>
+</html>
