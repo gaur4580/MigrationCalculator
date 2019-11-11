@@ -1,40 +1,59 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>FAWS Migration Pricing Estimate Form</title>
 </head>
+
 <body>
-  <h3>FAWS Migration Estimation Cost Form</h3>
-  <p>
-    <b>Instructions:</b> Simply enter the number of servers to get a rough idea of potential pricing in USD. Minimum engagement of $ 2,500.
-  </p>
-  <form name="MIGRATIONS" action="javascript:myFunction(); return false;">
-    <table>
-      <tr>
-        <td>Number of Servers</td>
-        <td>
-          <input type="number" name="SERVERS" id="input" min="0" value="0" oninput="calculate();"/>
-        </td>
-      </tr>
-      <tr>
-        <td>Estimated Cost Range (low)</td>
-        <td>
-          <div id="COST_LOW"></div>
-        </td>
-      </tr>
-      <tr>
-        <td>Estimated Cost Range (high)</td>
-        <td>
-          <div id="COST_HIGH"></div>
-        </td>
-      </tr>
-      <tr>
-  </table>
-  </form>
+    <h3>FAWS Migration Estimation Cost Form</h3>
+    <p>
+        <b>Instructions:</b> Simply enter the number of servers to get a rough idea of potential pricing in USD. Minimum engagement of $2,500 for Onshore and $1300 for Offshore.
+    </p>
+    <form name="MIGRATIONS" action="javascript:myFunction(); return false;">
+        <table>
+            <tr>
+                <td>Number of Servers</td>
+                <td>
+                    <input type="number" name="SERVERS" id="input" min="0" value="0" oninput="calculate();" />
+                </td>
+            </tr><br>
+            <tr>
+                <td>RiverMeadow Required?</td>
 
-  <object type="text/html" width="100%" height="1000px" data="caveats.html"></object>
+                <td>
+                    <input type="radio" name="rd1" checked="checked" onchange="calculate();">No <br>
+                    <input type="radio" name="rd1" id="RM" onchange="calculate();">Yes
 
-  <script type="text/javascript" src="js/calc.js"></script>
+
+            </tr>
+            <tr>
+
+                <td>
+                    OnShore Engineer <input type="radio" name="Engineer" checked="checked" onchange="calculate();"><br> OffShore Engineer <input type="radio" name="Engineer" id="OffShore" onchange="calculate();">
+
+
+            </tr>
+            <tr>
+                <td>Estimated Cost Range (low)</td>
+                <td>
+                    <div id="COST_LOW"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Estimated Cost Range (high)</td>
+                <td>
+                    <div id="COST_HIGH"></div>
+                </td>
+            </tr>
+            <tr>
+        </table>
+    </form>
+
+    <object type="text/html" width="100%" height="1000px" data="caveats.html"></object>
+
+    <script type="text/javascript" src="js/calc.js"></script>
 </body>
+
 </html>
